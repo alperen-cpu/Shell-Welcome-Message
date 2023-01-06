@@ -11,4 +11,5 @@ df -h -t ext4 | awk '{print $2 " " $3 " " $4}'
 echo "${bold}Memory Info:${normal}"
 cat /proc/meminfo | numfmt --field 2 --from-unit=Ki --to-unit=Mi | sed 's/ kB/M/g'| grep -e "MemFree" -we "MemTotal"
 echo "--------------------"
+echo "${bold}CPU Info:${normal}"
 echo "CPU Usage: "$[100-$(vmstat 1 2|tail -1|awk '{print $15}')]"%"
