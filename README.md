@@ -84,6 +84,8 @@ echo -e "\nTest Mail." | msmtp -a mail example@example.com
 nano /etc/update-motd.d/01-custom
 chmod +x /etc/update-motd.d/01-custom
 ```
-<img align="left" alt="Twitter" width="700px"
-        src="https://user-images.githubusercontent.com/85456369/210991754-d70db4bb-c326-4db4-8948-12df560bdc54.png" /></a>
-
+<img width="700px"
+        src="https://user-images.githubusercontent.com/85456369/210991754-d70db4bb-c326-4db4-8948-12df560bdc54.png" /></a></img>
+<h3>Mail Screenshot example</h3><br>
+<img width="700px"
+        src="https://user-images.githubusercontent.com/85456369/211160550-e8762cef-0c89-4a7f-8418-7e3e18a28d8d.png" /></a></img>
