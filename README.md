@@ -1,6 +1,52 @@
 # Shell-Welcome-Message
+# CentOS 7 guide
+In order to send login information to your e-mail address, the msmtp tool must be installed.<br>
 
-## msmtp Install and Conf
+```bash
+  yum install epel-release
+  yum install msmtp
+```
+Edit config file ~/.msmtprc
+```bash
+# Set default values for all following accounts.
+defaults
+auth           on
+tls            on
+tls_trust_file /etc/ssl/certs/ca-bundle.crt
+logfile        ~/.msmtp.log
+
+# mail
+account        mail
+host           mail.example.com
+port           465
+tls_starttls   off
+from           example@example.com
+user           example@example.com
+password       password
+
+# Set a default account
+account default : mail
+```
+Grant necessary authorization
+```bash
+chmod 600 ~/.msmtprc
+```
+Test if it works
+```bash
+echo -e "\nTest Mail." | msmtp -a mail example@example.com
+```
+## Run
+```bash
+nano /etc/profile
+```
+add command
+```bash
+bash path/centos.sh
+```
+
+<hr>
+<h1>Debian 11 guide</h1>
+<h3>msmtp Install and Conf</h3>
 
 In order to send login information to your e-mail address, the msmtp tool must be installed.<br>
 
