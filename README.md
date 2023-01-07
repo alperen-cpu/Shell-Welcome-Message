@@ -18,7 +18,7 @@ logfile ~/.msmtp.log
 # mail
 account    mail
 host       mail.example.com
-port       587
+port       465
 from       example@example.com
 user       example@example.com
 password   password
