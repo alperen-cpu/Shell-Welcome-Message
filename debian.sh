@@ -7,7 +7,7 @@ echo "${bold}Server uptime:${normal}" && uptime -p
 echo "${bold}Operating system:${normal}";cat /etc/os-release | grep '^VERSION' /etc/os-release | grep -E '^(VERSION|NAME)=' /etc/os-release
 echo "${bold}Last Logins:${normal}" && last $USER | head -n 3;last $USER | head -n 3 >> /tmp/lastlogin.txt
 echo "Sending email..."
-echo -e "\nThe user $USER is logged into the $HOSTNAME server.\nLast Login:\n`cat /tmp/lastlogin.txt`" | msmtp -a mail example@example.com
+echo -e "Subject: SSH Login $HOSTNAME\r\n\r\nThe user $USER is logged into the $HOSTNAME server.\nLast Login:\n`cat /tmp/lastlogin.txt`" | msmtp -a mail example@example.com
 echo "--------------------"
 echo "${bold}Disk Info:${normal}"
 df -h -t ext4 | awk '{print $2 " " $3 " " $4}'
