@@ -1,4 +1,5 @@
 #!/bin/bash
+rm -rf /tmp/lastlogin.txt
 bold=$(tput bold)
 normal=$(tput sgr0)
 echo "#--------------------${bold}Welcome $USER ${normal}--------------------#"
