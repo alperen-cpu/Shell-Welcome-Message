@@ -1,4 +1,5 @@
 #!/bin/bash
+USER=$(whoami)
 rm -rf /tmp/lastlogin.txt
 bold=$(tput bold)
 normal=$(tput sgr0)
